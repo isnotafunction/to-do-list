@@ -1,0 +1,130 @@
+body{
+ margin: 0;
+ padding: 0;
+ height: 100vh;
+ font-family: 'Roboto', sans-serif;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: #6ed8ce;
+}
+
+.container{
+  height: 50%;
+  width: 50%;
+  background-color:#daf2f0;
+  color: #154d59;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*opacity: 0.8;*/
+}
+.addItems{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.newItem{
+  font-size: 18px;
+  width: 90%;
+  background-color: rgba(25, 170, 160, 0.7);
+  color:white;
+  text-indent: 15px;
+  border: 0px;
+  box-shadow: none;
+  border-radius:5px;
+  outline:none;
+  appearance:none;
+}
+.submit{
+  font-size: 18px;
+  color:teal;
+  outline: none;
+  border-radius: 50%;
+  border: 1px solid teal;
+  height: 40px;
+  width:40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.submit:hover{
+  box-shadow: 0 0 10px teal;
+}
+.submit:active{
+  transform: scale(1.1);
+}
+.checklistContainer{
+  font-size: 1rem;
+  color: teal;
+  margin-top: 1rem;
+  width: 80%;
+  height: 80%;
+}
+
+ul.toDoList{
+  width: 100%;
+  float:left;
+  padding:0;
+}
+
+.toDoList li{
+  width: 100%;
+  min-height: 30px;
+  text-indent: 15px;
+  font-size: 14px;
+  line-height: 30px;
+  padding: 5px 0px;
+  background-color: white;
+  margin: 5px;
+  border-radius: 5px;
+  list-style: none;
+  box-shadow: 0 1px 2px #aac4c2;
+}
+.buttons{
+  height: 30px;
+  width: 30px;
+  border: none;
+  color:teal;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.3;
+}
+#x{
+  float:right;
+  color: #f74756;
+}
+#x:hover{
+  opacity:1;
+  font-size:20px;
+}
+
+.check{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: teal;
+}
+.check:active{
+  transform: scale(1.1);
+}
+#tick{
+  float:left;
+}
+#tick:hover{
+  opacity:1;
+}
+#tick:active{
+  opacity:1;
+}
+
+.on{
+  opacity: 1;
+}
