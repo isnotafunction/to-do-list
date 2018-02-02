@@ -9,7 +9,6 @@ body{
  /* background-color: #6ed8ce; */
  background: linear-gradient(to top, #eaecc6, #2bc0e4);
 }
-
 .container{
   height: 60%;
   width: 80%;
@@ -68,16 +67,21 @@ body{
   margin-top: 1rem;
   width: 80%;
   height: 80%;
+  display: flex;
+  flex-direction: column;
 }
-
-ul.toDoList{
+ul{
   width: 100%;
   float:left;
   padding:0;
   box-sizing: border-box;
 }
+.doneList{
+  color:#aaa;
+  opacity: 0.7;
+}
 
-.toDoList li{
+li{
   box-sizing: border-box;
   min-height: 30px;
   text-indent: 15px;
@@ -105,18 +109,15 @@ ul.toDoList{
 }
 #x{
   float:right;
-
 }
 #x:hover{
   opacity:1;
   font-size:20px;
 }
-
 .circle{
   height: 10px;
   width: 10px;
   border-radius: 50%;
-
 }
 .circle:active{
   transform: scale(1.1);
@@ -136,19 +137,15 @@ ul.toDoList{
 #tick:active{
   opacity:1;
 }
-
 .on{
   opacity: 1;
 }
-.done{
-  color:gray;
-  opacity: 0.8;
-}
-p{
-  color: black;
-}
-.off{
-  display:none;
+.line{
+  height: 2px;
+  width: 50%;
+  background-color: #aaa;
+  opacity: 0.7;
+  margin: 0 auto;
 }
 
 @media (min-width:600px){
