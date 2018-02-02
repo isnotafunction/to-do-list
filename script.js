@@ -2,8 +2,6 @@ var newItem = document.querySelector(".newItem");
 var submit = document.querySelector(".submit");
 var toDoList = document.querySelector(".toDoList");
 var doneList = document.querySelector(".doneList");
-var p = document.querySelector("p");
-var li = document.getElementsByTagName("li");
 
 //renderHTML from localStorage if there is anything
 var data = (localStorage.getItem("toDo")) ? JSON.parse(localStorage.getItem("toDo")): {
@@ -14,7 +12,14 @@ console.log(data)
 renderToDoList()
 
 //add new item
-submit.addEventListener("click", function(){
+submit.addEventListener("click", addToDo)
+newItem.addEventListener("keyup", function(e){
+  if (e.keyCode === 13){
+    addToDo()
+  }
+})
+
+function addToDo(){
   var value = newItem.value;
   var item =
   `<li>
@@ -23,18 +28,18 @@ submit.addEventListener("click", function(){
   <button id="x" onclick="remove(this)" class="buttons"><div class="circle red"></div></button>
   </li>`
   if(value){
-    toDoList.insertAdjacentHTML('afterbegin', item)
+    toDoList.insertAdjacentHTML('afterbegin', item);
     data.todo.push(value);
     }
     newItem.value="";
     dataUpdated()
-})
+}
 
   //complete list item
   function turnOn(el){
     var value = el.parentNode.childNodes[3].innerText;
-    data.completed.push(value)
-    data.todo.splice(data.todo.indexOf(value),1)
+    data.completed.push(value);
+    data.todo.splice(data.todo.indexOf(value),1);
     el.parentNode.parentNode.removeChild(el.parentNode);
     var item =
     `<li>
@@ -46,25 +51,23 @@ submit.addEventListener("click", function(){
     dataUpdated()
   }
 
- //remove item list and remove from array- very hacky, sort your html out!
+ //remove item list and remove from array- sort your html out!
   function remove(el){
-   alert("clicked remove");
    var text = el.parentNode.childNodes[3].innerText
    data.todo.splice(data.todo.indexOf(text),1)
    el.parentNode.parentNode.removeChild(el.parentNode);
    dataUpdated()
   }
 
-  //remove item from done list
+  //remove item from done list & completed array
   function removeCompleted(el){
-    alert("clicked clear");
     el.parentNode.parentNode.removeChild(el.parentNode);
     var value = el.parentNode.childNodes[3].innerText;
     data.completed.splice(data.completed.indexOf(value),1)
     dataUpdated()
   }
 
- //storing in localStorage
+ //store in localStorage
   function dataUpdated(){
     localStorage.setItem("toDo", JSON.stringify(data))
   }
@@ -85,12 +88,11 @@ submit.addEventListener("click", function(){
 
    for(var j=0; j<data.completed.length; j++){
       var value = data.completed[j];
-      console.log("this is completed of i "+ value)
       var item =
       `<li>
       <button id="tick" class="buttons on"><div class="circle green"></div></button>
       <span>${value}</span>
-      <button id="x" onclick="clear(this)" class="buttons"><div class="circle red"></div></button>
+      <button id="x" onclick="removeCompleted(this)" class="buttons"><div class="circle red"></div></button>
       </li>`
       doneList.insertAdjacentHTML('afterbegin', item)
     }
