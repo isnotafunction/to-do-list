@@ -6,12 +6,13 @@ body{
  display: flex;
  justify-content: center;
  align-items: center;
- background-color: #6ed8ce;
+ /* background-color: #6ed8ce; */
+ background: linear-gradient(to top, #eaecc6, #2bc0e4);
 }
 
 .container{
-  height: 50%;
-  width: 50%;
+  height: 60%;
+  width: 80%;
   background-color:#daf2f0;
   color: #154d59;
   border-radius: 10px;
@@ -27,16 +28,20 @@ body{
   justify-content: space-between;
 }
 .newItem{
-  font-size: 18px;
+  font-size: 15px;
   width: 90%;
   background-color: rgba(25, 170, 160, 0.7);
-  color:white;
+  color:#fff;
   text-indent: 15px;
   border: 0px;
   box-shadow: none;
   border-radius:5px;
   outline:none;
   appearance:none;
+}
+::placeholder{
+  color: white;
+  opacity: 0.6;
 }
 .submit{
   font-size: 18px;
@@ -69,13 +74,14 @@ ul.toDoList{
   width: 100%;
   float:left;
   padding:0;
+  box-sizing: border-box;
 }
 
 .toDoList li{
-  width: 100%;
+  box-sizing: border-box;
   min-height: 30px;
   text-indent: 15px;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 30px;
   padding: 5px 0px;
   background-color: white;
@@ -85,7 +91,7 @@ ul.toDoList{
   box-shadow: 0 1px 2px #aac4c2;
 }
 .buttons{
-  height: 30px;
+  min-height:30px;
   width: 30px;
   border: none;
   color:teal;
@@ -99,21 +105,27 @@ ul.toDoList{
 }
 #x{
   float:right;
-  color: #f74756;
+
 }
 #x:hover{
   opacity:1;
   font-size:20px;
 }
 
-.check{
+.circle{
   height: 10px;
   width: 10px;
   border-radius: 50%;
+
+}
+.circle:active{
+  transform: scale(1.1);
+}
+.green{
   background-color: teal;
 }
-.check:active{
-  transform: scale(1.1);
+.red{
+  background-color: #f74756;
 }
 #tick{
   float:left;
@@ -127,4 +139,27 @@ ul.toDoList{
 
 .on{
   opacity: 1;
+}
+.done{
+  color:gray;
+  opacity: 0.8;
+}
+p{
+  color: black;
+}
+.off{
+  display:none;
+}
+
+@media (min-width:600px){
+  .container{
+    height: 60%;
+    width: 500px;
+  }
+}
+@media (min-width:1000px){
+  .container{
+    height: 60%;
+    width: 50%;
+  }
 }
