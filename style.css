@@ -39,12 +39,13 @@ body{
   appearance:none;
 }
 ::placeholder{
-  color: white;
+  color: #fff;
   opacity: 0.6;
 }
 .submit{
   font-size: 18px;
   color:teal;
+  background-color: #fff;
   outline: none;
   border-radius: 50%;
   border: 1px solid teal;
@@ -88,7 +89,7 @@ li{
   font-size: 15px;
   line-height: 30px;
   padding: 5px 0px;
-  background-color: white;
+  background-color: #fff;
   margin: 5px;
   border-radius: 5px;
   list-style: none;
@@ -99,6 +100,7 @@ li{
   width: 30px;
   border: none;
   color:teal;
+  background-color: #fff;
   outline: none;
   display: flex;
   justify-content: center;
