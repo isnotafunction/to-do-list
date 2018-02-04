@@ -1,4 +1,5 @@
 var newItem = document.querySelector(".newItem");
+var addItems = document.querySelector(".addItems")
 var submit = document.querySelector(".submit");
 var toDoList = document.querySelector(".toDoList");
 var doneList = document.querySelector(".doneList");
@@ -8,16 +9,10 @@ var data = (localStorage.getItem("toDo")) ? JSON.parse(localStorage.getItem("toD
   todo : [],
   completed:[]
 };
-console.log(data)
+
 renderToDoList()
 
-//add new item
-submit.addEventListener("click", addToDo)
-newItem.addEventListener("keyup", function(e){
-  if (e.keyCode === 13){
-    addToDo()
-  }
-})
+addItems.addEventListener("submit", addToDo)
 
 function addToDo(){
   var value = newItem.value;
