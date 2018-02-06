@@ -111,6 +111,7 @@ li{
   align-items: center;
   cursor: pointer;
   font-size: 18px;
+  z-index: 9;
 }
 #x{
   float:right;
@@ -120,17 +121,16 @@ li{
   height: 10px;
   width: 10px;
   border-radius: 50%;
+  z-index: 10;
 }
 .circle:active{
   transform: scale(1.1);
 }
 .green{
   background-color: #219ebc;
-  z-index: 10;
 }
 .red{
   background-color: #ff6251;
-  z-index: 10;
 }
 #tick{
   float:left;
