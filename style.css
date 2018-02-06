@@ -126,9 +126,11 @@ li{
 }
 .green{
   background-color: #219ebc;
+  z-index: 10;
 }
 .red{
   background-color: #ff6251;
+  z-index: 10;
 }
 #tick{
   float:left;
