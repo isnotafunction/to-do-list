@@ -12,7 +12,7 @@ body{
 .container{
   height: 80%;
   width: 90%;
-  background-color:rgba(218, 242, 240, 0.7);
+  background-color:rgba(130, 252, 243, 0.4);
   color: #154d59;
   border-radius: 10px;
   display: flex;
@@ -29,7 +29,7 @@ body{
 .newItem{
   font-size: 15px;
   width: 90%;
-  background-color: rgba(25, 170, 160, 0.7);
+  background-color: #219ebc;
   color:#fff;
   text-indent: 15px;
   border: 0px;
@@ -44,11 +44,11 @@ body{
 }
 .submit{
   font-size: 18px;
-  color:teal;
+  color:#219ebc;
   background-color: #fff;
   outline: none;
+  border:none;
   border-radius: 50%;
-  border: 1px solid teal;
   height: 40px;
   width:40px;
   display: flex;
@@ -57,16 +57,16 @@ body{
   cursor: pointer;
 }
 .submit:hover{
-  box-shadow: 0 0 10px teal;
+  box-shadow: 0 0 10px #eaecc6;
 }
 .submit:active{
   transform: scale(1.1);
 }
 .checklistContainer{
   font-size: 1rem;
-  color: teal;
+  color: #12596b;
   margin-top: 1rem;
-  width: 80%;
+  width: 90%;
   height: 80%;
   display: flex;
   flex-direction: column;
@@ -85,10 +85,12 @@ ul{
 li{
   box-sizing: border-box;
   min-height: 30px;
-  text-indent: 15px;
+  min-width: 200px;
+  text-indent: 10px;
   font-size: 15px;
+  overflow-x: auto;
   line-height: 30px;
-  padding: 5px 0px;
+  padding: 10px;
   background-color: #fff;
   margin: 5px;
   border-radius: 5px;
@@ -145,7 +147,7 @@ li{
 .line{
   height: 2px;
   width: 50%;
-  background-color: #aaa;
+  background-color: #12596b;
   opacity: 0.7;
   margin: 0 auto;
 }
