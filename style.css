@@ -140,6 +140,10 @@ li{
   width: 10%;
   margin: 0 auto;
 }
+img{
+  height: 35px;
+  width: 35px;
+}
 
 @media (min-width:600px){
   .container{
