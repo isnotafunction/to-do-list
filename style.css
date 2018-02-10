@@ -24,7 +24,7 @@ body{
 .container::-webkit-scrollbar {
     display: none;
   }
-  
+
 .addItems{
   width: 90%;
   display: flex;
@@ -80,6 +80,7 @@ body{
   display: flex;
   flex-direction: column;
 }
+
 ul{
   width: 100%;
   float:left;
@@ -153,6 +154,10 @@ img{
   width: 35px;
 }
 
+::-webkit-scrollbar {
+    display: none;
+  }
+  
 @media (min-width:600px){
   .container{
     height: 80%;
