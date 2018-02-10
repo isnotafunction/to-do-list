@@ -21,6 +21,10 @@ body{
   align-items: center;
   overflow: scroll;
 }
+.container::-webkit-scrollbar {
+    display: none;
+  }
+  
 .addItems{
   width: 90%;
   display: flex;
