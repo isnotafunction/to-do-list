@@ -56,6 +56,10 @@ body{
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  background-image: none;
 }
 .submit:hover{
   box-shadow: 0 0 10px #eaecc6;
