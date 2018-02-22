@@ -91,6 +91,7 @@ ul.doneList{
 }
 
 li{
+  box-sizing:border-box;
   min-height: 30px;
   min-width: 200px;
   font-size: 1rem;
