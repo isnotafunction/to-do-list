@@ -121,7 +121,7 @@ span{
   float:right;
   opacity: 0.5;
   color: #ff6251;
-  font-family: 'Kalam', cursive;
+  font-family: 'Kalam', 'Roboto', sans-serif;
   font-size: 1rem;
 }
 #x:hover{
