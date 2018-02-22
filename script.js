@@ -20,8 +20,10 @@ function addToDo(){
   `<li>
   <button id="tick" class="buttons" onClick="turnOn(this)"><div class="circle green"></div></button>
   <span>${value}</span>
-  <button id="x" onclick="remove(this)" class="buttons"><div class="circle red"></div></button>
+  <button id="x" class="buttons" onclick="remove(this)">x</button>
   </li>`
+
+    // <button id="x" onclick="remove(this)" class="buttons"><div class="circle red"></div></button>
   if(value){
     toDoList.insertAdjacentHTML('afterbegin', item);
     data.todo.push(value);
@@ -38,9 +40,9 @@ function addToDo(){
     el.parentNode.parentNode.removeChild(el.parentNode);
     var item =
     `<li>
-    <button id="tick" class="buttons on"><div class="circle green"></div></button>
+    <button id="tick" class="buttons completed">&#10003</button>
     <span>${value}</span>
-    <button id="x" onclick="removeCompleted(this)" class="buttons"><div class="circle red"></div></button>
+    <button id="x" onclick="removeCompleted(this)" class="buttons">x</button>
     </li>`
     doneList.insertAdjacentHTML('afterbegin', item)
     dataUpdated()
@@ -76,7 +78,7 @@ function addToDo(){
      `<li>
      <button id="tick" class="buttons" onclick="turnOn(this)"><div class="circle green"></div></button>
      <span>${value}</span>
-     <button id="x" onclick="remove(this)" class="buttons"><div class="circle red"></div></button>
+     <button id="x" onclick="remove(this)" class="buttons">x</button>
      </li>`
      toDoList.insertAdjacentHTML('afterbegin', item)
     }
@@ -85,9 +87,9 @@ function addToDo(){
       var value = data.completed[j];
       var item =
       `<li>
-      <button id="tick" class="buttons on"><div class="circle green"></div></button>
+      <button id="tick" class="buttons completed">&#10003</button>
       <span>${value}</span>
-      <button id="x" onclick="removeCompleted(this)" class="buttons"><div class="circle red"></div></button>
+      <button id="x" onclick="removeCompleted(this)" class="buttons">x</button>
       </li>`
       doneList.insertAdjacentHTML('afterbegin', item)
     }

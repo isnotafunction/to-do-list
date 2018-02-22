@@ -6,7 +6,6 @@ body{
  display: flex;
  justify-content: center;
  align-items: center;
- /* background-color: #6ed8ce; */
  background: linear-gradient(to top, #eaecc6, #2bc0e4);
 }
 .container{
@@ -83,66 +82,73 @@ body{
 
 ul{
   width: 100%;
-  float:left;
   padding:0;
   margin: 0;
   box-sizing: border-box;
 }
-.doneList{
+ul.doneList{
   color:#aaa;
-  opacity: 0.7;
 }
 
 li{
-  box-sizing: border-box;
   min-height: 30px;
   min-width: 200px;
-  text-indent: 10px;
-  font-size: 15px;
-  overflow-x: auto;
-  line-height: 30px;
-  padding: 0 10px;
+  font-size: 1rem;
   background-color: #fff;
   margin: 5px;
   border-radius: 5px;
   list-style: none;
   box-shadow: 0 1px 2px #aac4c2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+span{
+  width: 80%;
 }
 .buttons{
   min-height:30px;
-  width: 30px;
+  width: 10%;
   border: none;
-  color:teal;
-  background-color: #fff;
+  background-color: transparent;
   outline: none;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  font-size: 18px;
-  z-index: 9;
 }
 #x{
   float:right;
+  opacity: 0.5;
+  color: #ff6251;
+  font-family: 'Kalam', cursive;
+  font-size: 1rem;
 }
-
+#x:hover{
+  opacity: 1;
+  z-index: 10;
+}
+#tick{
+  color: rgba(33, 158, 188, 0.7);
+}
 .circle{
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  z-index: 10;
 }
 .circle:active{
   transform: scale(1.1);
 }
+.completed{
+  color: #219ebc;
+  cursor: default;
+}
 .green{
   background-color: #219ebc;
+  opacity: 0.5;
 }
-.red{
-  background-color: #ff6251;
-}
-#tick{
-  float:left;
+.green:hover{
+  opacity: 1;
 }
 
 .divider{
@@ -157,7 +163,7 @@ img{
 ::-webkit-scrollbar {
     display: none;
   }
-  
+
 @media (min-width:600px){
   .container{
     height: 80%;
