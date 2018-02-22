@@ -18,7 +18,7 @@ function addToDo(){
   var value = newItem.value;
   var item =
   `<li>
-  <button id="tick" class="buttons" onClick="turnOn(this)"><div class="circle green"></div></button>
+  <button id="tick" class="buttons" onClick="turnOn(this)"><div class="greenCircle"></div></button>
   <span>${value}</span>
   <button id="x" class="buttons" onclick="remove(this)">x</button>
   </li>`
@@ -76,7 +76,7 @@ function addToDo(){
      var value = data.todo[i];
      var item =
      `<li>
-     <button id="tick" class="buttons" onclick="turnOn(this)"><div class="circle green"></div></button>
+     <button id="tick" class="buttons" onclick="turnOn(this)"><div class="greenCircle"></div></button>
      <span>${value}</span>
      <button id="x" onclick="remove(this)" class="buttons">x</button>
      </li>`

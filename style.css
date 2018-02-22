@@ -107,6 +107,7 @@ span{
   width: 80%;
 }
 .buttons{
+  box-sizing:border-box;
   min-height:30px;
   width: 10%;
   border: none;
@@ -118,7 +119,6 @@ span{
   cursor: pointer;
 }
 #x{
-  float:right;
   opacity: 0.5;
   color: #ff6251;
   font-family: 'Kalam', 'Roboto', sans-serif;
@@ -131,25 +131,23 @@ span{
 #tick{
   color: rgba(33, 158, 188, 0.7);
 }
-.circle{
+.greenCircle{
   height: 10px;
   width: 10px;
   border-radius: 50%;
+  background-color: #219ebc;
+  opacity: 0.5;
   box-sizing:border-box;
 }
-.circle:active{
+.greenCircle:hover{
+  opacity: 1;
+}
+.greenCircle:active{
   transform: scale(1.1);
 }
 .completed{
   color: #219ebc;
   cursor: default;
-}
-.green{
-  background-color: #219ebc;
-  opacity: 0.5;
-}
-.green:hover{
-  opacity: 1;
 }
 
 .divider{
