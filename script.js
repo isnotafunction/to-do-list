@@ -4,6 +4,16 @@ var submit = document.querySelector(".submit");
 var toDoList = document.querySelector(".toDoList");
 var doneList = document.querySelector(".doneList");
 
+if('serviceWorker' in navigator){
+  try {
+    navigator.serviceWorker.register('sw.js');
+    console.log('SW registered');
+    
+  } catch (error) {
+    console.log('registration failed')
+  }
+}
+
 //renderHTML from localStorage if there is anything
 var data = (localStorage.getItem("toDo")) ? JSON.parse(localStorage.getItem("toDo")): {
   todo : [],
