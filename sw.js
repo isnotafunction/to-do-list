@@ -11,13 +11,11 @@ self.addEventListener('install', async event => {
 
 self.addEventListener('fetch', event => {
 const req = event.request;
-console.log(req)
 event.respondWith(cacheFirst(req))
 })
 
 async function cacheFirst(req) {
   const cachedResponse = await caches.match(req)
-  console.log(cachedResponse)
   return cachedResponse || fetch(req)
 }
 

@@ -6,9 +6,7 @@ var doneList = document.querySelector(".doneList");
 
 if('serviceWorker' in navigator){
   try {
-    navigator.serviceWorker.register('sw.js');
-    console.log('SW registered');
-    
+    navigator.serviceWorker.register('sw.js');    
   } catch (error) {
     console.log('registration failed')
   }
