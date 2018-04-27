@@ -1,4 +1,4 @@
-{##To Do List with Local Storage](http://isnotafunction.github.io/to-do-list)   
+## [To Do List](http://isnotafunction.github.io/to-do-list)   
 
 A simple Progressive Web App using localStorage
 
