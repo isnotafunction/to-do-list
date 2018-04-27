@@ -2,10 +2,9 @@
   "name": "ToDo",
   "short_name": "ToDo",
   "theme_color": "#87dbe6",
-  "background_color": "#66c1df",
+  "background_color": "#87dbe6",
   "display": "standalone",
   "orientation": "portrait",
-  "Scope": "/",
   "start_url": ".",
   "icons": [
     {
