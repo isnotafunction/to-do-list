@@ -1,6 +1,6 @@
-##[To Do List with Local Storage](http://isnotafunction.github.io/to-do-list)   
+{##To Do List with Local Storage](http://isnotafunction.github.io/to-do-list)   
 
-* a project to practice using localStorage
+A simple Progressive Web App using localStorage
 
 User stories - as a user I want to be able to:
 
